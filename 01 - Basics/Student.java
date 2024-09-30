@@ -1,22 +1,26 @@
 package vjezba_01;
 
-public class Student extends Osoba{
+public class Student extends Osoba {
     
     private int MBS;
     private String nazivStudija;
     private int godinaStudija;
-
-    public Student() {
-    }
     
     @Override
     public void ispis() {
-        super.ispis();
+        super.ispis(); //To change body of generated methods, choose Tools | Templates.
         System.out.println("JMBAG: " + this.getMBS());
         System.out.println("Naziv studija: " + this.getNazivStudija());
         System.out.println("Godina studija: " + this.getGodinaStudija());
     }
+    
+    public Student() {
+    }
 
+    public Student(String ime, String prezime, int godina, char spol) {
+        super(ime, prezime, godina, spol);
+    }
+    
     public int getMBS() {
         return MBS;
     }
@@ -38,6 +42,13 @@ public class Student extends Osoba{
     }
 
     public void setGodinaStudija(int godinaStudija) {
+        this.godinaStudija = godinaStudija;
+    }
+
+    public Student(int MBS, String nazivStudija, int godinaStudija, String ime, String prezime, int godina, char spol) {
+        super(ime, prezime, godina, spol);
+        this.MBS = MBS;
+        this.nazivStudija = nazivStudija;
         this.godinaStudija = godinaStudija;
     }
 }
