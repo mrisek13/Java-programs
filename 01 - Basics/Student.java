@@ -11,9 +11,10 @@ public class Student extends Osoba{
     
     @Override
     public void ispis() {
-      //  super.ispis();
-        System.out.println("Naziv studija:" + nazivStudija);
-        System.out.println("Godina studija:" + godinaStudija);
+        super.ispis();
+        System.out.println("JMBAG: " + this.getMBS());
+        System.out.println("Naziv studija: " + this.getNazivStudija());
+        System.out.println("Godina studija: " + this.getGodinaStudija());
     }
 
     public int getMBS() {
