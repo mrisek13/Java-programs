@@ -7,7 +7,7 @@ package javaapplication2;
 
 /**
  *
- * @author Matija Risek
+ * @author Maja Risek
  */
 public class Osoba {
     
