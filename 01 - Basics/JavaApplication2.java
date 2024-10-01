@@ -12,7 +12,7 @@ import java.util.Vector;
 
 /**
  *
- * @author Matija Risek
+ * @author Maja Risek
  */
 public class JavaApplication2 {
 
