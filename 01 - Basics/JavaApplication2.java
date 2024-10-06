@@ -5,56 +5,108 @@
  */
 package javaapplication2;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Vector;
-
 /**
  *
  * @author Maja Risek
  */
-public class JavaApplication2 {
-
-    Vector vec = new Vector();
+public class Osoba {
     
+    private String ime;
+    private String prezime;
+    private int godina;
+    private char spol;
+    
+    
+
+    public Osoba() {
+    }
+
+    public Osoba(String ime, String prezime, int godina, char spol) {
+        this.ime = ime;
+        this.prezime = prezime;
+        this.godina = godina;
+        this.spol = spol;
+    }
+
     /**
-     * @param args the command line arguments
+     * Get the value of spol
+     *
+     * @return the value of spol
      */
-    public static void main(String[] args) {
-        JavaApplication2 app = new JavaApplication2();
-        app.upisPodataka();
-        app.ispisPodataka();
+    public char getSpol() {
+        return spol;
+    }
+
+    /**
+     * Set the value of spol
+     *
+     * @param spol new value of spol
+     */
+    public void setSpol(char spol) {
+        this.spol = spol;
+    }
+
+
+    /**
+     * Get the value of godina
+     *
+     * @return the value of godina
+     */
+    public int getGodina() {
+        return godina;
+    }
+
+    /**
+     * Set the value of godina
+     *
+     * @param godina new value of godina
+     */
+    public void setGodina(int godina) {
+        this.godina = godina;
+    }
+
+
+    /**
+     * Get the value of prezime
+     *
+     * @return the value of prezime
+     */
+    public String getPrezime() {
+        return prezime;
+    }
+
+    /**
+     * Set the value of prezime
+     *
+     * @param prezime new value of prezime
+     */
+    public void setPrezime(String prezime) {
+        this.prezime = prezime;
+    }
+
+
+    /**
+     * Get the value of ime
+     *
+     * @return the value of ime
+     */
+    public String getIme() {
+        return ime;
+    }
+
+    /**
+     * Set the value of ime
+     *
+     * @param ime new value of ime
+     */
+    public void setIme(String ime) {
+        this.ime = ime;
     }
     
-    void upisPodataka() {
-        try{
-            BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
-            System.out.println("Upišite podatke o osobama");
-            for (int x = 1; x <= 3; x++) {
-                System.out.println("Upis " + x + ". osobe: ");
-                Osoba osoba = new Osoba();
-                System.out.print("Unesite ime " + x + ". osobe: ");
-                osoba.setIme(bufferRead.readLine());
-                System.out.print("Unesite prezime " + x + ". osobe: ");
-                osoba.setPrezime(bufferRead.readLine()); 
-                System.out.print("Unesite godine " + x + ". osobe: ");
-                String god = bufferRead.readLine();            
-                osoba.setGodina(Integer.parseInt(god));
-                System.out.print("Unesite spol " + x + ". osobe: ");
-                osoba.setSpol(bufferRead.readLine().charAt(0));
-                vec.add(osoba);
-            }
-        } catch(IOException e) {
-            e.printStackTrace();  
-        }  
+    public void ispis() {
+        System.out.println("Ime i prezime: " + ime + " " + prezime);
+        System.out.println("Godina rođenja: " + godina);
+        System.out.println("Spol: " + (spol == 'Z' ? "ženski" : "muški"));
     }
-
-    private void ispisPodataka() {
-        for (int x = 0; x <= 2; x++) {
-            Osoba o = (Osoba)vec.get(x);
-            o.ispis();
-        }
-    }
-
+     
 }
