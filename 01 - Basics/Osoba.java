@@ -12,12 +12,11 @@ package javaapplication2;
 public class Osoba {
     
     private String ime;
-    
     private String prezime;
-    
     private int godina;
-    
     private char spol;
+    
+    
 
     public Osoba() {
     }
@@ -109,5 +108,5 @@ public class Osoba {
         System.out.println("Godina rođenja: " + godina);
         System.out.println("Spol: " + (spol == 'Z' ? "ženski" : "muški"));
     }
-
+     
 }
