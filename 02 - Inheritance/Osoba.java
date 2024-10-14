@@ -16,8 +16,6 @@ public class Osoba {
     private int godina;
     private char spol;
     
-    
-
     public Osoba() {
     }
 
@@ -107,6 +105,5 @@ public class Osoba {
         System.out.println("Ime i prezime: " + ime + " " + prezime);
         System.out.println("Godina rođenja: " + godina);
         System.out.println("Spol: " + (spol == 'Z' ? "ženski" : "muški"));
-    }
-     
+    } 
 }
