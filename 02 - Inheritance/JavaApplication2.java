@@ -102,7 +102,7 @@ public class JavaApplication2 {
                 System.out.println("Prezime:");
                 student.setPrezime(bufferRead.readLine());
                 
-                System.out.println("Godina roðenja:");
+                System.out.println("Godina rođenja:");
                 String rod = bufferRead.readLine();
                 student.setGodina(Integer.parseInt(rod));
                 
@@ -145,7 +145,7 @@ public class JavaApplication2 {
                 System.out.println("Prezime:");
                 radnik.setPrezime(bufferRead.readLine());
                 
-                System.out.println("Godina roðenja:");
+                System.out.println("Godina rođenja:");
                 String rod = bufferRead.readLine();
                 radnik.setGodina(Integer.parseInt(rod));
                 
