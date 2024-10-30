@@ -93,8 +93,5 @@ public class Fakultet {
      */
     public void setBrojStudenata(int brojStudenata) {
         this.brojStudenata = brojStudenata;
-    }
-
-
-    
+    }    
 }
