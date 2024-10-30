@@ -5,7 +5,7 @@
 
 /**
  *
- * @author Profesor
+ * @author mrisek
  */
 public class Fakultet {
     private String naziv;
