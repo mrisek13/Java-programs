@@ -12,12 +12,11 @@ public class OglasService {
     }
 
     public boolean dodajOglas(Oglas oglas) {
-        String query = "INSERT INTO OGLAS (id, naslov, datum, tekst) VALUES (?, ?, ?, ?)";
+        String query = "INSERT INTO OGLAS (naslov, datum, tekst) VALUES (?, ?, ?)";
         try (PreparedStatement stmt = conn.prepareStatement(query)) {
-            stmt.setInt(1, oglas.getId());
-            stmt.setString(2, oglas.getNaslov());
-            stmt.setString(3, oglas.getDatum());
-            stmt.setString(4, oglas.getTekst());
+            stmt.setString(1, oglas.getNaslov());
+            stmt.setString(2, oglas.getDatum());
+            stmt.setString(3, oglas.getTekst());
             stmt.executeUpdate();
             return true;
         } catch (SQLException e) {
