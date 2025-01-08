@@ -2,11 +2,7 @@ package oglascrud;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -20,7 +16,6 @@ public class DB {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
     
     public boolean isConnected(){
@@ -55,8 +50,7 @@ public class DB {
             props.put("characterSetResults", "cp1250");
             props.put("user", "root");
             props.put("password", "");
-            this.conn = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/oglasi", props);
+            this.conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/oglasi", props);
 
         } catch (Exception e) {
             e.printStackTrace();
